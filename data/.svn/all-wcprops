@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xmlinthecloud/!svn/ver/3883/internships/Tianqi-2014/stage_m1/data
+END
+order.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/order.txt
+END
+items.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/items.txt
+END
+address.txt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/address.txt
+END
+friends.txt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/friends.txt
+END
+lineitem.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/lineitem.txt
+END
+users.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/users.txt
+END
+visit.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/visit.txt
+END
+shops.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/xmlinthecloud/!svn/ver/4004/internships/Tianqi-2014/stage_m1/data/shops.txt
+END

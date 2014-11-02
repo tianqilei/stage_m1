@@ -1,0 +1,17 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "Visits",
+ "fields": [
+   { "name": "visit", "type" :{ "type": "array", "items" : {
+   			"type": "record",
+   			"name": "Visit",
+   			"fields" : [
+   				{"name": "itemId", "type": "string", "default": ""},
+   				{"name": "time", "type": "string", "default": ""},
+   				{"name": "date", "type": "string", "default": ""},
+   				{"name": "buy", "type": "string", "default": ""}
+   			]
+   }}, "default" : []}
+ ]
+}

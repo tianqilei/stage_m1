@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/xmlinthecloud/!svn/ver/3973/internships/Tianqi-2014/stage_m1/src/conn2database
+END
+item.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xmlinthecloud/!svn/ver/3828/internships/Tianqi-2014/stage_m1/src/conn2database/item.avsc
+END
+InitializeOracleNosql.txt
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/xmlinthecloud/!svn/ver/3828/internships/Tianqi-2014/stage_m1/src/conn2database/InitializeOracleNosql.txt
+END
+ordered.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3940/internships/Tianqi-2014/stage_m1/src/conn2database/ordered.avsc
+END
+itemlines.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3940/internships/Tianqi-2014/stage_m1/src/conn2database/itemlines.avsc
+END
+Conn2OracleNosql.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/xmlinthecloud/!svn/ver/4151/internships/Tianqi-2014/stage_m1/src/conn2database/Conn2OracleNosql.java
+END
+users.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/xmlinthecloud/!svn/ver/4088/internships/Tianqi-2014/stage_m1/src/conn2database/users.avsc
+END
+visits.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/xmlinthecloud/!svn/ver/3940/internships/Tianqi-2014/stage_m1/src/conn2database/visits.avsc
+END
+addresses.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3940/internships/Tianqi-2014/stage_m1/src/conn2database/addresses.avsc
+END
+generate-specific.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/xmlinthecloud/!svn/ver/3828/internships/Tianqi-2014/stage_m1/src/conn2database/generate-specific.xml
+END
+items.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/xmlinthecloud/!svn/ver/4151/internships/Tianqi-2014/stage_m1/src/conn2database/items.avsc
+END
+Conn2Postgresql.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/xmlinthecloud/!svn/ver/4112/internships/Tianqi-2014/stage_m1/src/conn2database/Conn2Postgresql.java
+END
+friendship.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/3940/internships/Tianqi-2014/stage_m1/src/conn2database/friendship.avsc
+END
+orderquantity.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/xmlinthecloud/!svn/ver/3940/internships/Tianqi-2014/stage_m1/src/conn2database/orderquantity.avsc
+END
+Conn2Hbase.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/4088/internships/Tianqi-2014/stage_m1/src/conn2database/Conn2Hbase.java
+END
+shop.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xmlinthecloud/!svn/ver/3828/internships/Tianqi-2014/stage_m1/src/conn2database/shop.avsc
+END
+itemusers.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/4088/internships/Tianqi-2014/stage_m1/src/conn2database/itemusers.avsc
+END
+usr.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/xmlinthecloud/!svn/ver/4088/internships/Tianqi-2014/stage_m1/src/conn2database/usr.avsc
+END

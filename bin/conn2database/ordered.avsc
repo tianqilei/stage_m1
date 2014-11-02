@@ -1,0 +1,10 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "Ordered",
+ "fields": [
+   { "name": "usrId", "type": "string", "default" : ""},
+   { "name": "date", "type": "string", "default" : ""},
+   { "name": "total_price", "type": "double", "default": 0.0}
+ ]
+}

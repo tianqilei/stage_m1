@@ -1,0 +1,71 @@
+10
+
+dir
+4000
+https://scm.gforge.inria.fr/svn/xmlinthecloud/internships/Tianqi-2014/stage_m1/lib
+https://scm.gforge.inria.fr/svn/xmlinthecloud
+
+
+
+2014-06-03T11:47:17.066380Z
+3938
+tlei
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+927d2063-e912-4f34-9e95-a9e17dfa15e9
+
+generate-specific-libs
+dir
+
+lib-hbase
+dir
+
+lib-oracleNosql
+dir
+
+postgresql-9.2-1002.jdbc3.jar
+file
+
+
+
+
+2014-06-17T09:07:40.000000Z
+4bd7703c0a3d2d651ebd526e77d82eda
+2014-04-23T16:07:21.942355Z
+3665
+tlei
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+524911
+

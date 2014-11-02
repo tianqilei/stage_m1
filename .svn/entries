@@ -1,0 +1,117 @@
+10
+
+dir
+4000
+https://scm.gforge.inria.fr/svn/xmlinthecloud/internships/Tianqi-2014/stage_m1
+https://scm.gforge.inria.fr/svn/xmlinthecloud
+
+
+
+2014-06-13T13:25:20.555025Z
+3984
+tlei
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+927d2063-e912-4f34-9e95-a9e17dfa15e9
+
+.classpath
+file
+
+
+
+
+2014-06-17T09:07:22.000000Z
+2bd7f185739a438e3e0f428245942ffe
+2014-05-23T10:57:05.949033Z
+3828
+tlei
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+593
+
+.project
+file
+
+
+
+
+2014-06-17T09:07:23.000000Z
+2e97b87a77f3a1199179d6fcd6481f4a
+2014-04-23T09:09:35.216617Z
+3656
+tlei
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+367
+
+.settings
+dir
+
+data
+dir
+
+lib
+dir
+
+notes
+dir
+
+rapport
+dir
+
+src
+dir
+
+tools
+dir
+

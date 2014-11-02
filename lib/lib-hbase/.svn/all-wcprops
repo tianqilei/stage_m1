@@ -1,0 +1,371 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/xmlinthecloud/!svn/ver/3938/internships/Tianqi-2014/stage_m1/lib/lib-hbase
+END
+jersey-json-1.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jersey-json-1.8.jar
+END
+commons-io-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-io-2.1.jar
+END
+jasper-runtime-5.5.23.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jasper-runtime-5.5.23.jar
+END
+jasper-compiler-5.5.23.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jasper-compiler-5.5.23.jar
+END
+jruby-complete-1.6.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jruby-complete-1.6.5.jar
+END
+metrics-core-2.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/metrics-core-2.1.2.jar
+END
+jetty-util-6.1.26.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jetty-util-6.1.26.jar
+END
+jsp-2.1-6.1.14.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jsp-2.1-6.1.14.jar
+END
+httpcore-4.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/httpcore-4.1.3.jar
+END
+jaxb-api-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jaxb-api-2.1.jar
+END
+junit-4.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/junit-4.11.jar
+END
+commons-codec-1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-codec-1.4.jar
+END
+hbase-0.94.17-tests.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xmlinthecloud/!svn/ver/3828/internships/Tianqi-2014/stage_m1/lib/lib-hbase/hbase-0.94.17-tests.jar
+END
+jackson-xc-1.8.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jackson-xc-1.8.8.jar
+END
+commons-collections-3.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-collections-3.2.1.jar
+END
+jaxb-impl-2.2.3-1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jaxb-impl-2.2.3-1.jar
+END
+slf4j-api-1.4.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/slf4j-api-1.4.3.jar
+END
+commons-lang-2.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-lang-2.5.jar
+END
+jackson-jaxrs-1.8.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jackson-jaxrs-1.8.8.jar
+END
+commons-beanutils-core-1.8.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-beanutils-core-1.8.0.jar
+END
+slf4j-log4j12-1.4.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/slf4j-log4j12-1.4.3.jar
+END
+jackson-mapper-asl-1.8.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jackson-mapper-asl-1.8.8.jar
+END
+avro-1.5.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/avro-1.5.3.jar
+END
+commons-cli-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-cli-1.2.jar
+END
+commons-logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-logging-1.1.1.jar
+END
+asm-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/asm-3.1.jar
+END
+commons-digester-1.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-digester-1.8.jar
+END
+commons-net-1.4.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-net-1.4.1.jar
+END
+servlet-api-2.5-6.1.14.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/servlet-api-2.5-6.1.14.jar
+END
+jetty-6.1.26.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jetty-6.1.26.jar
+END
+jsp-api-2.1-6.1.14.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jsp-api-2.1-6.1.14.jar
+END
+jettison-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jettison-1.1.jar
+END
+jamon-runtime-2.3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jamon-runtime-2.3.1.jar
+END
+libthrift-0.8.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/libthrift-0.8.0.jar
+END
+jersey-server-1.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jersey-server-1.8.jar
+END
+protobuf-java-2.4.0a.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/protobuf-java-2.4.0a.jar
+END
+avro-ipc-1.5.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/avro-ipc-1.5.3.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/log4j-1.2.16.jar
+END
+hamcrest-core-1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/hamcrest-core-1.3.jar
+END
+hadoop-core-1.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/hadoop-core-1.0.4.jar
+END
+guava-11.0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/guava-11.0.2.jar
+END
+commons-math-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-math-2.1.jar
+END
+netty-3.2.4.Final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/netty-3.2.4.Final.jar
+END
+javahltests.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/javahltests.jar
+END
+commons-configuration-1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-configuration-1.6.jar
+END
+activation-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/activation-1.1.jar
+END
+jackson-core-asl-1.8.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jackson-core-asl-1.8.8.jar
+END
+zookeeper-3.4.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/zookeeper-3.4.5.jar
+END
+httpclient-4.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/httpclient-4.1.2.jar
+END
+commons-httpclient-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-httpclient-3.1.jar
+END
+high-scale-lib-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/high-scale-lib-1.1.1.jar
+END
+jsr305-1.3.9.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jsr305-1.3.9.jar
+END
+xmlenc-0.52.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/xmlenc-0.52.jar
+END
+hbase-0.94.17.jar
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/xmlinthecloud/!svn/ver/3828/internships/Tianqi-2014/stage_m1/lib/lib-hbase/hbase-0.94.17.jar
+END
+velocity-1.7.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/velocity-1.7.jar
+END
+jersey-core-1.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/jersey-core-1.8.jar
+END
+snappy-java-1.0.3.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/snappy-java-1.0.3.2.jar
+END
+commons-beanutils-1.7.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-beanutils-1.7.0.jar
+END
+core-3.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/core-3.1.1.jar
+END
+stax-api-1.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/stax-api-1.0.1.jar
+END
+commons-el-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xmlinthecloud/!svn/ver/3688/internships/Tianqi-2014/stage_m1/lib/lib-hbase/commons-el-1.0.jar
+END

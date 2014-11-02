@@ -1,0 +1,15 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "OrderQuantitys",
+ "fields": [
+   { "name": "sale", "type" :{ "type": "array", "items" : {
+   			"type": "record",
+   			"name": "OrderQuantity",
+   			"fields" : [
+  				{ "name": "orderid", "type": "string", "default" : ""},
+   				{ "name": "quantity", "type": "int", "default" : 0}
+   			]
+   }}, "default" : []}
+ ]
+}

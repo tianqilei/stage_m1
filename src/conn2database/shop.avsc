@@ -1,0 +1,9 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "Shop",
+ "fields": [
+   { "name": "shopName", "type": "string", "default" : ""},
+   { "name": "url", "type": "string", "default" : ""}
+ ]
+}

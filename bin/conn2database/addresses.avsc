@@ -1,0 +1,16 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "Addresses",
+ "fields": [
+   { "name": "address", "type" :{ "type": "array", "items" : {
+   			"type": "record",
+   			"name": "Address",
+   			"fields": [
+   				{"name": "street", "type": "string", "default": ""},
+   				{"name": "city", "type": "string", "default": ""},
+   				{"name": "country", "type": "string", "default": ""}
+   			]
+   }}, "default" : []}
+ ]
+}

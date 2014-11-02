@@ -1,0 +1,19 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "ItemUsrs",
+ "fields": [
+   { "name": "itemid", "type": "string", "default" : ""},
+   { "name": "userlist", "type" :{ "type": "array", "items" : {
+   			"type": "record",
+   			"name": "UsrBuy",
+   			"fields" : [
+   				{ "name" : "usrId", "type": "string", "default" : ""},
+   				{ "name": "name", "type": "string", "default" : ""},
+  				{ "name": "sex", "type": "string", "default" : ""},
+   				{ "name": "age", "type": "int", "default": 0},
+  				{ "name": "buy", "type": "string", "default" : ""}				
+   			]
+   }}, "default" : []}
+ ]
+}

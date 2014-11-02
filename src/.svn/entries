@@ -1,0 +1,52 @@
+10
+
+dir
+4000
+https://scm.gforge.inria.fr/svn/xmlinthecloud/internships/Tianqi-2014/stage_m1/src
+https://scm.gforge.inria.fr/svn/xmlinthecloud
+
+
+
+2014-06-13T13:25:20.555025Z
+3984
+tlei
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+927d2063-e912-4f34-9e95-a9e17dfa15e9
+
+avro
+dir
+
+conn2database
+dir
+
+dataGenerator
+dir
+
+entityOfPostgresql
+dir
+
+main
+dir
+
+query
+dir
+
+tools
+dir
+
+vip2p_copy
+dir
+

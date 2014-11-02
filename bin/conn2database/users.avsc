@@ -1,0 +1,17 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "Usrs",
+ "fields": [
+   { "name": "userlist", "type" :{ "type": "array", "items" : {
+   			"type": "record",
+   			"name": "Usr",
+   			"fields" : [
+   				{ "name": "usrId", "type": "string", "default" : ""},
+   				{ "name": "name", "type": "string", "default" : ""},
+  				{ "name": "sex", "type": "string", "default" : ""},
+   				{ "name": "age", "type": "int", "default": 0}
+   			]
+   }}, "default" : []}
+ ]
+}

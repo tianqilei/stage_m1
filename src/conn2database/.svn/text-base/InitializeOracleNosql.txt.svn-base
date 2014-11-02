@@ -1,0 +1,4 @@
+How to initialize Oracle Nosql
+1. Define schemas
+2. run kvlite and add schema into store (ddl add-schema -file <filename>)
+3. command in terminal : ant -f generate-specific.xml 

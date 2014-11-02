@@ -1,0 +1,12 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "Item",
+ "fields": [
+   { "name": "name", "type": "string", "default" : ""},
+   { "name": "url", "type": "string", "default" : ""},
+   { "name": "price", "type": "double", "default": 0.0},
+   { "name": "description", "type": "string", "default": ""},
+   { "name": "shopId", "type": "string", "default": ""}
+ ]
+}

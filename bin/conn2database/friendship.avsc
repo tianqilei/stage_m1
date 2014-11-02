@@ -1,0 +1,8 @@
+{
+ "type": "record",
+ "namespace": "avro",
+ "name": "Friendship",
+ "fields": [
+   { "name": "friendship", "type" :{ "type": "array", "items" : "string"}, "default" : []}
+ ]
+}

@@ -1,0 +1,7 @@
+SELECT usr.id_usr, name, sex, age, street, city, country FROM addr, usr where usr.id_usr=addr.id_usr AND usr.id_usr='usr5000';
+SELECT age FROM addr, usr WHERE usr.id_usr=addr.id_usr AND country='tappets';
+SELECT id_item, sum(quantity) AS nb FROM lineitem GROUP BY id_item;
+SELECT id_item, count(*) AS nb FROM visit WHERE buy='y' GROUP BY id_item ORDER BY nb DESC LIMIT 10;
+SELECT id_item, count(*) AS nb FROM visit WHERE buy='n' GROUP BY id_item ORDER BY nb DESC LIMIT 10;
+SELECT url, count(*) AS nb FROM visit, item WHERE visit.id_item=item.id_item GROUP BY url ORDER BY nb DESC LIMIT 100;
+SELECT DISTINCT id_usr1, id_usr2, v1.id_item FROM friend, usr u1, usr u2, visit v1, visit v2 WHERE id_usr1=u1.id_usr and id_usr2=u2.id_usr and u1.id_usr=v1.id_usr and u2.id_usr=v2.id_usr and v1.id_item=v2.id_item and v1.buy='y' and v2.buy='y';

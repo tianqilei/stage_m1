@@ -1,0 +1,344 @@
+package dataGenerator;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.HColumnDescriptor;
+import org.apache.hadoop.hbase.HTableDescriptor;
+import org.apache.hadoop.hbase.client.HBaseAdmin;
+import org.apache.hadoop.hbase.client.HTable;
+import org.apache.hadoop.hbase.client.Put;
+import org.apache.hadoop.hbase.client.Result;
+import org.apache.hadoop.hbase.client.ResultScanner;
+import org.apache.hadoop.hbase.client.Scan;
+import org.apache.hadoop.hbase.filter.Filter;
+import org.apache.hadoop.hbase.filter.PrefixFilter;
+import org.apache.hadoop.hbase.util.Bytes;
+
+import tools.GetIntFromId;
+import tools.IPGetter;
+import tools.TransformInteger;
+import conn2database.Conn2Hbase;
+import entityOfPostgresql.Address;
+import entityOfPostgresql.Item;
+import entityOfPostgresql.LineItem;
+import entityOfPostgresql.Ordered;
+import entityOfPostgresql.Shop;
+import entityOfPostgresql.Usr;
+import entityOfPostgresql.Visit;
+
+/*
+ * This class is for writing the data into HBase
+ * You should change the HOST_ADDRESS
+ * */
+
+public class DataGeneraorIO4Hbase {
+
+	private Conn2Hbase conn2Hbase;
+	private HTable usrHTable;
+	private HTable itemHTable;
+	private HTable shopHTable;
+	private HTable addressHTable;
+	private HTable orderHTable;
+	private HTable order2HTable;
+	private HTable friendHTable;
+	private HTable lineItemHTable;
+	private HTable visitTable;
+	private static Configuration configuration;
+	private static final String HOST_ADDRESS = IPGetter.get();
+	private HBaseAdmin admin;
+
+	public DataGeneraorIO4Hbase() throws Exception {
+		conn2Hbase = new Conn2Hbase();
+		configuration = HBaseConfiguration.create();
+		configuration.set("hbase.zookeeper.quorum", HOST_ADDRESS);
+		admin = new HBaseAdmin(configuration);
+		if (admin.tableExists("usr")) {
+			usrHTable = conn2Hbase.connHTable("usr");
+		}
+		if (admin.tableExists("item")) {
+			itemHTable = conn2Hbase.connHTable("item");
+		}
+		if (admin.tableExists("shop")) {
+			shopHTable = conn2Hbase.connHTable("shop");
+		}
+		if (admin.tableExists("itemorder")) {
+			orderHTable = conn2Hbase.connHTable("itemorder");
+		}
+		if (admin.tableExists("orderitem")) {
+			order2HTable = conn2Hbase.connHTable("orderitem");
+		}
+
+		if (admin.tableExists("visit")) {
+			visitTable = conn2Hbase.connHTable("visit");
+		}
+		if (admin.tableExists("friendship")) {
+			friendHTable = conn2Hbase.connHTable("friendship");
+		}
+	}
+
+	public void init() throws Exception {
+		createTable("usr", new String[] { "info", "friendship", "country",
+				"address" });
+		createTable("shop", new String[] { "info", "items" });
+		createTable("item", new String[] { "info" });
+		createTable("visit", new String[] { "info" });
+		createTable("friendship", new String[] { "f" });
+		createTable("itemorder", new String[] { "info" });
+		createTable("orderitem", new String[] { "info" });
+	}
+
+	public void createTable(String tableName, String cols[]) throws Exception {
+		if (admin.tableExists(tableName)) {
+			if (admin.isTableEnabled(tableName)) {
+				admin.disableTable(tableName);
+				admin.deleteTable(tableName);
+			} else {}
+				admin.deleteTable(tableName);
+		}
+		HTableDescriptor table = new HTableDescriptor(tableName);
+		for (String c : cols) {
+			HColumnDescriptor col = new HColumnDescriptor(c);
+			table.addFamily(col);
+		}
+
+		admin.createTable(table);
+		admin.close();
+
+	}
+
+	public void writeShop(Shop shop, ArrayList<Item> items) throws Exception {
+
+		GetIntFromId getIntFromId = new GetIntFromId(shop.getId_shop(), "shop");
+		String newIntegerString = TransformInteger.transform(
+				getIntFromId.get(), DataGeneratorIO.NB_SHOP);
+		String shopId = getIntFromId.restore(newIntegerString);
+		Put p = new Put(Bytes.toBytes(shopId));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("name"),
+				Bytes.toBytes(shop.getName()));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("url"),
+				Bytes.toBytes(shop.getUrl()));
+		if (items != null) {
+			for (int i = 0; i < items.size(); i++) {
+				Put p2 = new Put(Bytes.toBytes(shopId + "/"
+						+ items.get(i).getId_item()));
+
+				p2.add(Bytes.toBytes("items"), Bytes.toBytes("name"),
+						Bytes.toBytes(items.get(i).getName()));
+				p2.add(Bytes.toBytes("items"), Bytes.toBytes("price"),
+						Bytes.toBytes(Float.toString(items.get(i).getPrice())));
+				shopHTable.put(p2);
+			}
+		}
+		shopHTable.put(p);
+	}
+
+	public void writeUsr(Usr usr, ArrayList<Address> addressList)
+			throws IOException {
+		GetIntFromId getIntFromId = new GetIntFromId(usr.getId_usr(), "usr");
+		int i = getIntFromId.get();
+		String newIntegerString = TransformInteger.transform(i,
+				DataGeneratorIO.NB_USR);
+		String usrId = getIntFromId.restore(newIntegerString);
+
+		Put p = new Put(Bytes.toBytes(usrId));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("name"),
+				Bytes.toBytes(usr.getName()));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("sex"),
+				Bytes.toBytes(usr.getSex()));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("age"),
+				Bytes.toBytes(Integer.toString(usr.getAge())));
+
+		if (addressList != null) {
+			for (i = 0; i < addressList.size(); i++) {
+				Address address = addressList.get(i);
+				p.add(Bytes.toBytes("country"),
+						Bytes.toBytes("c" + String.valueOf(i)),
+						Bytes.toBytes(address.getCountry()));
+				p.add(Bytes.toBytes("address"),
+						Bytes.toBytes("a" + String.valueOf(i)),
+						Bytes.toBytes(address.getStreet() + ","
+								+ address.getCity() + ","
+								+ address.getCountry()));
+
+			}
+		} else {
+			p.add(Bytes.toBytes("country"), Bytes.toBytes("c0"),
+					Bytes.toBytes("no"));
+			p.add(Bytes.toBytes("address"), Bytes.toBytes("a0"),
+					Bytes.toBytes("no"));
+		}
+		usrHTable.put(p);
+	}
+
+	public void writeItem(Item item) throws IOException {
+		GetIntFromId getIntFromId = new GetIntFromId(item.getId_item(), "item");
+		String newIntegerString = TransformInteger.transform(
+				getIntFromId.get(), DataGeneratorIO.NB_ITEM);
+		String itemId = getIntFromId.restore(newIntegerString);
+		Put p = new Put(Bytes.toBytes(itemId));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("name"),
+				Bytes.toBytes(item.getName()));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("price"),
+				Bytes.toBytes(Float.toString(item.getPrice())));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("url"),
+				Bytes.toBytes(item.getUrl()));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("description"),
+				Bytes.toBytes(item.getDescription()));
+		itemHTable.put(p);
+	}
+
+	public void writeAddress(String usrId, ArrayList<Address> addressList)
+			throws IOException {
+
+		GetIntFromId getIntFromId = new GetIntFromId(usrId, "usr");
+		String newIntegerString = TransformInteger.transform(
+				getIntFromId.get(), DataGeneratorIO.NB_USR);
+		usrId = getIntFromId.restore(newIntegerString);
+
+		Put p = new Put(Bytes.toBytes(usrId));
+
+		for (int i = 0; i < addressList.size(); i++) {
+			Address address = addressList.get(i);
+			p.add(Bytes.toBytes("country"),
+					Bytes.toBytes("c" + String.valueOf(i)),
+					Bytes.toBytes(address.getCountry()));
+			p.add(Bytes.toBytes("city"),
+					Bytes.toBytes("city" + String.valueOf(i)),
+					Bytes.toBytes(address.getCity()));
+			p.add(Bytes.toBytes("street"),
+					Bytes.toBytes("s" + String.valueOf(i)),
+					Bytes.toBytes(address.getStreet()));
+		}
+		addressHTable.put(p);
+	}
+
+	public void writeFriend(String usrId, ArrayList<String> friendList)
+			throws IOException {
+		if (friendList != null) {
+			for (int i = 0; i < friendList.size(); i++) {
+				String friendId = friendList.get(i);
+				Put p = new Put(Bytes.toBytes(usrId + "/" + friendId));
+				p.add(Bytes.toBytes("f"), Bytes.toBytes("friendid"),
+						Bytes.toBytes(friendId));
+				friendHTable.put(p);
+			}
+		}
+	}
+
+	public void writeVisit(String usrId, ArrayList<Visit> visitList)
+			throws Exception {
+		if (visitList != null) {
+			for (int i = 0; i < visitList.size(); i++) {
+				Visit visit = visitList.get(i);
+				String itemId = visit.getIdItem();
+
+				int day = visit.getDay();
+				int month = visit.getMonth();
+				int year = visit.getYear();
+				int hour = visit.getHour();
+				int minute = visit.getMinute();
+				int sec = visit.getSecond();
+				String buyString = Character.toString(visit.getBuy());
+				String dateString = year + "-" + month + "-" + day;
+				String time = hour + ":" + minute + ":" + sec;
+				Put p = new Put(Bytes.toBytes(itemId + "/" + usrId + "/"
+						+ dateString + "/" + time));
+				p.add(Bytes.toBytes("info"), Bytes.toBytes("buy"),
+						Bytes.toBytes(buyString));
+				visitTable.put(p);
+			}
+		}
+	}
+
+	public void writeOrder(Ordered ordered, ArrayList<LineItem> lineItemList)
+			throws IOException {
+		GetIntFromId getIntFromId = new GetIntFromId(ordered.getIdOrder(),
+				"order");
+		String newIntegerString = TransformInteger.transform(
+				getIntFromId.get(), DataGeneratorIO.NB_ORDER);
+		String orderId = getIntFromId.restore(newIntegerString);
+
+		for (int i = 0; i < lineItemList.size(); i++) {
+			String itemId = lineItemList.get(i).getItemId();
+			getIntFromId = new GetIntFromId(itemId, "item");
+			newIntegerString = TransformInteger.transform(getIntFromId.get(),
+					DataGeneratorIO.NB_ITEM);
+			itemId = getIntFromId.restore(newIntegerString);
+
+			String usrId = ordered.getIdUsr();
+			String shopId = ordered.getIdShop();
+			Put p = new Put(Bytes.toBytes(itemId + "/" + orderId));
+			p.add(Bytes.toBytes("info"), Bytes.toBytes("usrId"),
+					Bytes.toBytes(usrId));
+			p.add(Bytes.toBytes("info"), Bytes.toBytes("shopId"),
+					Bytes.toBytes(shopId));
+			p.add(Bytes.toBytes("info"), Bytes.toBytes("year"),
+					Bytes.toBytes(Integer.toString(ordered.getYear())));
+			p.add(Bytes.toBytes("info"), Bytes.toBytes("month"),
+					Bytes.toBytes(Integer.toString(ordered.getMonth())));
+			p.add(Bytes.toBytes("info"), Bytes.toBytes("day"),
+					Bytes.toBytes(Integer.toString(ordered.getDay())));
+			p.add(Bytes.toBytes("info"), Bytes.toBytes("total_price"),
+					Bytes.toBytes(Float.toString(ordered.getTotalPrice())));
+			p.add(Bytes.toBytes("info"), Bytes.toBytes("quantity"), Bytes
+					.toBytes(Integer
+							.toString(lineItemList.get(i).getQuantity())));
+			Put p2 = new Put(Bytes.toBytes(orderId + "/" + itemId));
+			p2.add(Bytes.toBytes("info"), Bytes.toBytes("usrId"),
+					Bytes.toBytes(usrId));
+			p2.add(Bytes.toBytes("info"), Bytes.toBytes("shopId"),
+					Bytes.toBytes(shopId));
+			p2.add(Bytes.toBytes("info"), Bytes.toBytes("year"),
+					Bytes.toBytes(Integer.toString(ordered.getYear())));
+			p2.add(Bytes.toBytes("info"), Bytes.toBytes("month"),
+					Bytes.toBytes(Integer.toString(ordered.getMonth())));
+			p2.add(Bytes.toBytes("info"), Bytes.toBytes("day"),
+					Bytes.toBytes(Integer.toString(ordered.getDay())));
+			p2.add(Bytes.toBytes("info"), Bytes.toBytes("total_price"),
+					Bytes.toBytes(Float.toString(ordered.getTotalPrice())));
+			p2.add(Bytes.toBytes("info"), Bytes.toBytes("quantity"), Bytes
+					.toBytes(Integer
+							.toString(lineItemList.get(i).getQuantity())));
+			orderHTable.put(p);
+			order2HTable.put(p2);
+		}
+	}
+
+	public void writeLineItem(LineItem lineItem) throws IOException {
+		byte[] rowKey = Bytes.add(Bytes.toBytes(lineItem.getOrderId()),
+				Bytes.toBytes(lineItem.getItemId()));
+		Put p = new Put(rowKey);
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("orderId"),
+				Bytes.toBytes(lineItem.getOrderId()));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("itemId"),
+				Bytes.toBytes(lineItem.getItemId()));
+		p.add(Bytes.toBytes("info"), Bytes.toBytes("quantity"),
+				Bytes.toBytes(Integer.toString(lineItem.getQuantity())));
+		lineItemHTable.put(p);
+	}
+
+	public void scan(HTable table) throws IOException {
+		Scan s = new Scan();
+		Filter filter = new PrefixFilter(Bytes.toBytes("usr99"));
+		s.setFilter(filter);
+		ResultScanner rs = table.getScanner(s);
+		for (Result r : rs) {
+			System.out.println("VALUE : "
+					+ Bytes.toString(r.getValue(Bytes.toBytes("info"),
+							Bytes.toBytes("usrId2"))));
+		}
+	}
+
+	public static void main(String[] args) throws Exception {
+		// DataGenerator dGenerator = new DataGenerator();
+		DataGeneraorIO4Hbase dGeneraorIO4Hbase = new DataGeneraorIO4Hbase();
+		// dGeneraorIO4Hbase.init();
+
+		dGeneraorIO4Hbase.scan(dGeneraorIO4Hbase.friendHTable);
+
+	}
+
+}
